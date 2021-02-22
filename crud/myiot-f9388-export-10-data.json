@@ -1,0 +1,63 @@
+{
+  "status-alat" : [ {
+    "id" : 0,
+    "jam_alat" : "14:18:00",
+    "nama_alat" : "Kmr Mandi  ",
+    "status_alat" : 1,
+    "tanggal_alat" : "2018-11-29"
+  }, {
+    "id" : 1,
+    "jam_alat" : "12:27:00",
+    "nama_alat" : "Teras",
+    "status_alat" : 0,
+    "tanggal_alat" : "2018-11-29"
+  }, {
+    "id" : 2,
+    "jam_alat" : "12:14:00",
+    "nama_alat" : "Kulkas",
+    "status_alat" : 1,
+    "tanggal_alat" : "2018-11-29"
+  }, {
+    "id" : 3,
+    "jam_alat" : "16:32:46",
+    "nama_alat" : "Rng Tamu",
+    "status_alat" : 1,
+    "tanggal_alat" : "2018-11-29"
+  }, {
+    "id" : 4,
+    "jam_alat" : "16:32:46",
+    "nama_alat" : "Kmr Tidur",
+    "status_alat" : 0,
+    "tanggal_alat" : "2018-11-29"
+  }, {
+    "id" : 5,
+    "jam_alat" : "14:18:00",
+    "nama_alat" : "Kipas Angin",
+    "status_alat" : 1,
+    "tanggal_alat" : "2018-11-13"
+  }, {
+    "id" : 6,
+    "jam_alat" : "04:11:00",
+    "nama_alat" : "Mesin Air",
+    "status_alat" : 0,
+    "tanggal_alat" : "2018-11-29"
+  }, {
+    "id" : 7,
+    "jam_alat" : "15:24:00",
+    "nama_alat" : "TV",
+    "status_alat" : 1,
+    "tanggal_alat" : "2018-11-29"
+  }, {
+    "id" : 8,
+    "jam_alat" : "12:24:48",
+    "nama_alat" : "Monitor",
+    "status_alat" : 0,
+    "tanggal_alat" : "2018-12-04"
+  }, {
+    "id" : 9,
+    "jam_alat" : "13:26:52",
+    "nama_alat" : "Setrika",
+    "status_alat" : 1,
+    "tanggal_alat" : "2018-12-03"
+  } ]
+}
