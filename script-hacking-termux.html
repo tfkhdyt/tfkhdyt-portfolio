@@ -29,11 +29,20 @@
       font-family: 'Roboto', sans-serif;
       height: 100%;
     }
+
+    .vertical-center {
+      min-height: 100%;
+      /* Fallback for browsers do NOT support vh unit */
+      min-height: 100vh;
+      /* These two lines are counted as one :-)       */
+      display: flex;
+      align-items: center;
+    }
   </style>
 </head>
 
 <body data-spy="scroll" data-target=".scrollspy" bgcolor="black">
-  <div class="jumbotron d-flex align-items-center" id="cookieAccept">
+  <div class="jumbotron vertical-center" id="cookieAccept">
     <div class="container">
       <center>
         <h2>Peringatan</h2>
@@ -47,7 +56,7 @@
       </center>
     </div>
   </div>
-  <div class="container hidden d-flex align-items-center" id="mainbody">
+  <div class="container hidden vertical-center" id="mainbody">
     <div class="row marketing">
       <div class="col-lg-12">
         <video src="/prank.mp4" preload oncanplaythrough loop id="mainvid" width="100%"></video></div>
