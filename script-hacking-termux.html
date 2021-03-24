@@ -43,21 +43,23 @@
 
 <body data-spy="scroll" data-target=".scrollspy" bgcolor="black">
   <!-- Modal -->
-  <div class="modal fade" id="Modal" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle"
-    aria-hidden="true">
-    <div class="modal-dialog modal-dialog-centered" role="document">
-      <div class="modal-content">
-        <div class="modal-header">
-          <h5 class="modal-title" id="exampleModalLongTitle">Peringatan</h5>
-        </div>
-        <div class="modal-body">
-          <p>Script berikut sangat ampuh, dan dapat dikategorikan sebagai tindakan
-            ilegal. Apakah anda siap menerima resikonya?</p>
-        </div>
-        <div class="modal-footer">
-          <a href="https://www.tembolok.id/tutorial-belajar-termux-dan-menggunakan-termux-untuk-pemula/?ampcf=1&amp=1">
+  <div id="cookieAccept">
+    <div class="modal fade" id="Modal" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle"
+      aria-hidden="true">
+      <div class="modal-dialog modal-dialog-centered" role="document">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title" id="exampleModalLongTitle">Peringatan</h5>
+          </div>
+          <div class="modal-body">
+            <p>Script berikut sangat ampuh, dan dapat dikategorikan sebagai tindakan
+              ilegal. Apakah anda siap menerima resikonya?</p>
+          </div>
+          <div class="modal-footer">
+            <a href="https://www.tembolok.id/tutorial-belajar-termux-dan-menggunakan-termux-untuk-pemula/?ampcf=1&amp=1">
         <button type="button" class="btn btn-danger">Close</button></a>
-          <button type="button" class="btn btn-primary" id="btnCookieAccept">Ya, saya siap</button>
+            <button type="button" class="btn btn-primary" id="btnCookieAccept">Ya, saya siap</button>
+          </div>
         </div>
       </div>
     </div>
@@ -92,7 +94,7 @@
     {
       $(window).on('load', function()
       {
-        $('#Modal').modal('show');
+        $('#cookieAccept').modal('show');
       });
       /*$('#btnCookieAccept').click(function()
       {
@@ -100,7 +102,7 @@
       });*/
       $("#btnCookieAccept").click(function()
       {
-        $("#Modal").addClass("hidden");
+        $("#cookieAccept").addClass("hidden");
         $("#mainbody").removeClass("hidden");
         $('#mainvid').trigger('play');
 
