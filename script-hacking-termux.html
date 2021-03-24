@@ -90,13 +90,6 @@
   <script>
     $(document).ready(function()
     {
-      $("#btnCookieAccept").click(function()
-      {
-        $("#Modal").addClass("hidden");
-        $("#mainbody").removeClass("hidden");
-        $('#mainvid').trigger('play');
-
-      });
       $(window).on('load', function()
       {
         $('#Modal').modal('show');
@@ -104,6 +97,13 @@
       $('#btnCookieAccept').click(function()
       {
         $('#Modal').modal('hide');
+      });
+      $("#btnCookieAccept").click(function()
+      {
+        $("#Modal").addClass("hidden");
+        $("#mainbody").removeClass("hidden");
+        $('#mainvid').trigger('play');
+
       });
     });
   </script>
