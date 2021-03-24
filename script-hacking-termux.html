@@ -35,17 +35,22 @@
       align-items: center;
       height: 100vh;
     }
+    body.modal-open .blur{
+    -webkit-filter: blur(1px);
+    -moz-filter: blur(1px);
+    -o-filter: blur(1px);
+    -ms-filter: blur(1px);
+    filter: blur(1px);
+}
   </style>
 </head>
 <body data-spy="scroll" data-target=".scrollspy">
+  <div class="blur">
 <div class="modal fade" id="Modal" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
   <div class="modal-dialog modal-dialog-centered" role="document">
     <div class="modal-content">
       <div class="modal-header">
         <h5 class="modal-title" id="exampleModalLongTitle">Peringatan</h5>
-        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-          <span aria-hidden="true">&times;</span>
-        </button>
       </div>
       <div class="modal-body">
         <p>Script berikut sangat ampuh, dan dapat dikategorikan sebagai tindakan ilegal.
@@ -58,6 +63,7 @@
       </div>
     </div>
   </div>
+</div>
 </div>
   <div class="container hidden vertical-center" id="mainbody">
     <div class="row marketing">
