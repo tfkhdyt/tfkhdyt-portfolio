@@ -76,6 +76,10 @@
     {
       $(window).on('load', function() {
         $('#Modal').modal('show');
+        $('#Modal').modal({
+    		backdrop: 'static',
+    		keyboard: false
+		});
       });
       $("#btnCookieAccept").click(function()
       {
