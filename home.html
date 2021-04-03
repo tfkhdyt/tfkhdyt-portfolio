@@ -94,8 +94,8 @@
           <small>Kami menggunakan cookie untuk mempersonalisasi konten dan iklan, untuk menyediakan fitur media sosial dan untuk menganalisis traffic kami. Kami juga membagikan informasi tentang penggunaan situs web kami oleh Anda dengan partner media sosial, periklanan dan analisis yang mungkin digabungkan dengan Informasi lain yang Anda sediakan kepada mereka atau yang telah mereka kumpulkan dari penggunaan layanan mereka oleh Anda</small>
         </div>
         <div class="modal-footer">
-          <button type="button" class="btn btn-danger" id="btnCookieAccept"><i class="fa fa-times-circle"></i> Tolak</button>
-          <button type="button" class="btn btn-success" id="btnCookieAccept"><i class="fa fa-check-circle"></i> Terima</button>
+          <button type="button" class="btn btn-danger btnCookieAccept"><i class="fa fa-times-circle"></i> Tolak</button>
+          <button type="button" class="btn btn-success btnCookieAccept"><i class="fa fa-check-circle"></i> Terima</button>
         </div>
       </div>
     </div>
@@ -124,7 +124,7 @@
           keyboard: false
         });
       });
-      $("#btnCookieAccept").click(function()
+      $(".btnCookieAccept").click(function()
       {
         $("#Modal").modal('hide')
         $("#mainbody").removeClass("hidden");
