@@ -84,22 +84,6 @@ www.yopiardinal.wordpress.com -->
       measurementId: "G-P55V8988M2"
     };
     firebase.initializeApp(config);
-    var dbRefPass = firebase.database();
-    var refPass = dbRefPass.ref("user");
-    refPass.on('value', handleSuccess);
-    var pass = "";
-
-    function handleSuccess(item)
-    {
-      pass = item.val().pass;
-      var promptPass = prompt("Masukkan password");
-
-      if (promptPass != pass)
-      {
-        alert("Password salah!");
-        window.location.href = "https://tfkhdyt.web.app";
-      }
-    }
 
     // Menampilkan data dalam bentuk tabel
     function tampilData()
@@ -435,5 +419,72 @@ www.yopiardinal.wordpress.com -->
       </div>
     </div>
   </div>
+  <!-- Modal -->
+<div class="modal fade" id="modalLogin" tabindex="-1" role="dialog" aria-labelledby="modalLogin" aria-hidden="true">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="exampleModalLabel">Login</h5>
+      </div>
+      <div class="modal-body">
+        <p>Masukkan Password</p>
+        <input type="text" class="form-control" id="pass">
+        <div id="notif"></div>
+      </div>
+      <div class="modal-footer">
+        <button type="reset" class="btn btn-danger" data-dismiss="modal">Reset</button>
+        <button type="submit" class="btn btn-primary" id="submit">Login</button>
+      </div>
+    </div>
+  </div>
+</div>
+  <script>
+    var dbRefPass = firebase.database();
+    var refPass = dbRefPass.ref("user");
+    refPass.on('value', handleSuccess);
+    var pass = "";
+    function validation(){
+    function handleSuccess(item)
+    {
+      pass = item.val().pass;
+      var myPass = document.getElementById('pass').value;
+
+      if (myPass != pass)
+      {
+        document.getElementById('notif').innerHTML =  `
+        <div class="alert alert-danger" role='alert'>
+          Password salah
+        </div>
+        `;
+      }else{
+        $(document).ready(function(){
+          $("#submit").click(function(){
+            $("#modalLogin").modal('hide'); 
+          }) 
+        })
+      }
+    }
+    }
+    $(document).ready(function()
+    {
+      $(window).on('load', function()
+      {
+        //$('#Modal').modal('show');
+        $('#modalLogin').modal(
+        {
+          backdrop: 'static',
+          keyboard: false
+        });
+      });
+      $("#btnCookieAccept").click(function()
+      {
+        $("#Modal").modal('hide');
+        $("#mainbody").removeClass("hidden");
+        $('#mainvid').trigger('play');
+
+      });
+
+    });
+  </script>
 </body>
 </html>
