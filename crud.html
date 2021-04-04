@@ -35,7 +35,7 @@
   </style>
 </head>
 
-<body onload="tampilData()">
+<body>
   <script type="text/javascript" charset="utf-8">
   </script>
   <div style="padding:15px;padding-top:0;">
@@ -475,6 +475,7 @@
               $("#Modal").modal('hide');
             })
           })
+          tampilData();
         }
       }
     }
@@ -482,7 +483,6 @@
     {
       $(window).on('load', function()
       {
-        //$('#Modal').modal('show');
         $('#Modal').modal(
         {
           backdrop: 'static',
