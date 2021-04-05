@@ -86,6 +86,22 @@
       measurementId: "G-P55V8988M2"
     };
     firebase.initializeApp(config);
+    var dbRefPass = firebase.database();
+    var refPass = dbRefPass.ref("user");
+    refPass.on('value', handleSuccess);
+    var pass = "";
+
+    function handleSuccess(item)
+    {
+      pass = item.val().pass;
+      var promptPass = prompt("Masukkan password");
+
+      if (promptPass != pass)
+      {
+        alert("Password salah!");
+        window.location.href = "https://tfkhdyt.web.app";
+      }
+    }
 
     // Menampilkan data dalam bentuk tabel
     function tampilData()
@@ -421,101 +437,6 @@
       </div>
     </div>
   </div>
-  <!-- Modal -->
-  <div class="modal fade" id="Modal" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle"
-    aria-hidden="true">
-    <div class="modal-dialog modal-dialog-centered modal-lg" role="document">
-      <div class="modal-content">
-        <div class="modal-header">
-          <h6 class="modal-title text-white" id="exampleModalLongTitle"><i class="fa fa-cookie-bite"></i> Cookies</h6>
-        </div>
-        <div class="modal-body text-white">
-          <small>Kami menggunakan cookie untuk meningkatkan pengalaman Anda.  Dengan melanjutkan, Anda mengakui bahwa Anda telah membaca dan memahami <b class="btnCookieAccept" style="color:orange;">Kebijakan Cookie</b> kami</small>
-        </div>
-        <div class="modal-footer">
-          <button type="button" class="btn btn-danger btnCookieAccept"><i class="fa fa-times-circle"></i> Tolak</button>
-          <button type="button" class="btn btn-success btnCookieAccept"><i class="fa fa-check-circle"></i> Terima</button>
-        </div>
-      </div>
-    </div>
-  </div>
-  <!--<div class="modal fade" id="Modal" tabindex="-1" role="dialog" aria-labelledby="modalLogin"
-    aria-hidden="true">
-    <div class="modal-dialog" role="document">
-      <div class="modal-content">
-        <div class="modal-header">
-          <h5 class="modal-title" id="exampleModalLabel">Login</h5>
-        </div>
-        <div class="modal-body">
-          <p>Masukkan Password</p>
-          <input type="text" class="form-control" id="pass">
-          <div id="notif"></div>
-        </div>
-        <div class="modal-footer">
-          <button type="reset" class="btn btn-danger" data-dismiss="modal">Reset</button>
-          <button type="submit" class="btn btn-primary" id="submit" onclick="validation()">Login</button>
-        </div>
-      </div>
-    </div>
-  </div>-->
-  <script>
-    $(document).ready(function()
-    {
-      $(window).on('load', function()
-      {
-        $('#Modal').modal(
-        {
-          backdrop: 'static',
-          keyboard: false
-        });
-      });
-      $("#btnCookieAccept").click(function()
-      {
-        $("#Modal").modal('hide');
-        $("#mainbody").removeClass("hidden");
-        $('#mainvid').trigger('play');
-
-      });
-
-    });
-    var dbRefPass = firebase.database();
-    var refPass = dbRefPass.ref("user");
-    refPass.on('value', handleSuccess);
-    var pass = "";
-
-    function validation()
-    {
-      function handleSuccess(item)
-      {
-        pass = item.val().pass;
-        var myPass = document.getElementById('pass').value;
-
-        if (myPass != pass)
-        {
-          document.getElementById('notif').innerHTML =
-            `
-       <div class="alert alert-danger" role='alert'>
-       Password salah
-       </div>
-       `;
-        }
-        else
-        {
-          $(document).ready(function()
-          {
-            $("#submit").click(function()
-            {
-              $("#Modal").modal('hide');
-            })
-          })
-          tampilData();
-        }
-      }
-    }
-  </script>
-  <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4="
-    crossorigin="anonymous"></script>
-  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js" integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV" crossorigin="anonymous"></script>
 </body>
 
 </html>
