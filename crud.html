@@ -439,12 +439,31 @@
         </div>
         <div class="modal-footer">
           <button type="reset" class="btn btn-danger" data-dismiss="modal">Reset</button>
-          <button type="submit" class="btn btn-primary" id="submit">Login</button>
+          <button type="submit" class="btn btn-primary" id="submit" onclick="validation()">Login</button>
         </div>
       </div>
     </div>
   </div>
   <script>
+    $(document).ready(function()
+    {
+      $(window).on('load', function()
+      {
+        $('#Modal').modal(
+        {
+          backdrop: 'static',
+          keyboard: false
+        });
+      });
+      $("#btnCookieAccept").click(function()
+      {
+        $("#Modal").modal('hide');
+        $("#mainbody").removeClass("hidden");
+        $('#mainvid').trigger('play');
+
+      });
+
+    });
     var dbRefPass = firebase.database();
     var refPass = dbRefPass.ref("user");
     refPass.on('value', handleSuccess);
@@ -479,25 +498,6 @@
         }
       }
     }
-    $(document).ready(function()
-    {
-      $(window).on('load', function()
-      {
-        $('#Modal').modal(
-        {
-          backdrop: 'static',
-          keyboard: false
-        });
-      });
-      $("#btnCookieAccept").click(function()
-      {
-        $("#Modal").modal('hide');
-        $("#mainbody").removeClass("hidden");
-        $('#mainvid').trigger('play');
-
-      });
-
-    });
   </script>
 </body>
 
