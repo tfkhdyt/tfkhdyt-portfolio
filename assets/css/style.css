@@ -1253,12 +1253,8 @@ div#copyright:hover span#c {
   transition: 0.5s;
 }
 
-.thumb-post{
+.thumb-post img {
   width: 100%;
   padding-top: 56.25%;
-}
-.thumb-post img {
-  width: auto;
-  height: auto;
   object-fit: cover;
 }
