@@ -1256,6 +1256,6 @@ div#copyright:hover span#c {
 .thumb-post img {
   width: 100vw;
   /* You can set the dimensions to whatever you want */
-  height: 77vh;
+  height: 23vh;
   object-fit: cover;
 }
