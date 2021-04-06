@@ -1253,9 +1253,12 @@ div#copyright:hover span#c {
   transition: 0.5s;
 }
 
+.thumb-post{
+  width: 100%;
+  padding-top: 56.25%;
+}
 .thumb-post img {
-  width: calc(1920px * 100%);
-  /* You can set the dimensions to whatever you want */
-  height: calc(1080px * 100%);
+  width: auto;
+  height: auto;
   object-fit: cover;
 }
