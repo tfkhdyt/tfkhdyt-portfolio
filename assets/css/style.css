@@ -8,6 +8,10 @@
 /*--------------------------------------------------------------
 # General
 --------------------------------------------------------------*/
+html{
+  position: relative;
+  min-height: 100%;
+}
 
 body {
   font-family: "Open Sans", sans-serif;
@@ -46,7 +50,7 @@ h6 {
   bottom: 15px;
   background: #0563bb;
   color: #fff;
-  transition: display 0.5s ease-in-out;
+  transition: display 1s ease-in-out;
   z-index: 99999;
 }
 
@@ -1267,4 +1271,9 @@ div#copyright:hover span#c {
     height: 300px;
     object-fit: cover;
   }
+}
+.donate{
+  position: absolute;
+  bottom: 0px;
+  left: 0;
 }

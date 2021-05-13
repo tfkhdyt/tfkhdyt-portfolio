@@ -8059,6 +8059,13 @@ button.bg-dark:focus {
     top: 0;
     z-index: 1020;
   }
+  .sticky-bottom {
+    position: -webkit-sticky;
+    position: sticky;
+    bottom: 0;
+    left: 0;
+    z-index: 1020;
+  }
 }
 
 .sr-only {
