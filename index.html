@@ -6,7 +6,7 @@
   <meta content="width=device-width, initial-scale=1.0" name="viewport">
 
   <title>TAUFIK HIDAYAT - Web Portfolio</title>
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" integrity="sha512-iBBXm8fW90+nuLcSKlbmrPcLa0OT92xO1BIsZ+ywDWZCvqsWgccV3gFoRBv0z+8dLJgyAHIhR35VZc2oM/gI1w==" crossorigin="anonymous" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" />
   <meta property="og:image" content="https://i.postimg.cc/k4QVy2TB/thumbnail.jpg"
   />
   <link rel="image_src" href="https://i.postimg.cc/k4QVy2TB/thumbnail.jpg">
@@ -91,7 +91,7 @@
         <a href="https://www.youtube.com/tfkhdyt" class="youtube" target="_blank"><i class="bx bxl-youtube"></i></a>
         <a href="https://www.github.com/tfkhdyt" class="github" target="_blank"><i class="bx bxl-github"></i></a>
         <!--<a href="https://www.linkedin.com/mwlite/in/taufik-hidayat-6793aa200" class="linkedin"
-                  target="_blank"><i class="bx bxl-linkedin"></i></a>-->
+                          target="_blank"><i class="bx bxl-linkedin"></i></a>-->
         <a href="https://pddikti.kemdikbud.go.id/data_mahasiswa/QUUyNzdEMjktNDk0Ri00RTlDLUE4NzgtNkUwRDBDRjIxOUNB" class="linkedin" target="_blank"><img src="https://i.postimg.cc/xTRTNQqf/1619598687133.png" alt="" height=30px style="padding-bottom:10px;" /></a>
       </div>
       <br>
@@ -489,7 +489,7 @@
           <a href="https://www.youtube.com/tfkhdyt" class="youtube" target="_blank"><i class="bx bxl-youtube"></i></a>
           <a href="https://www.github.com/tfkhdyt" class="github" target="_blank"><i class="bx bxl-github"></i></a>
           <!--<a href="https://www.linkedin.com/mwlite/in/taufik-hidayat-6793aa200" class="linkedin"
-                    target="_blank"><i class="bx bxl-linkedin"></i></a>-->
+                              target="_blank"><i class="bx bxl-linkedin"></i></a>-->
           <a href="https://pddikti.kemdikbud.go.id/data_mahasiswa/QUUyNzdEMjktNDk0Ri00RTlDLUE4NzgtNkUwRDBDRjIxOUNB" class="linkedin" target="_blank"><img src="https://i.postimg.cc/HWQ8sfgz/1619598524839.png" alt="" height=25px style="padding-bottom:7px;" /></a>
         </div>
         <div class="copyright" id="copyright">
@@ -504,7 +504,9 @@
     <!--<a href="#" class="back-to-top"><i class="bx bx-up-arrow-alt"></i></a>-->
 
     <div id="preloader"></div>
-
+    <button type="button" class="btn btn-floating btn-md" id="btn-back-to-top">
+      <i class="fa fa-arrow-up"></i>
+    </button>
     <!-- Vendor JS Files -->
     <script src="assets/vendor/jquery/jquery.min.js"></script>
     <script src="assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
@@ -520,8 +522,8 @@
     <!-- Template Main JS File -->
     <script src="assets/js/main.js"></script>
     <!--<script src="https://cdnjs.cloudflare.com/ajax/libs/firebase/8.2.8/firebase.js"
-        integrity="sha512-LF9mm8uJwJj05mfwqi1W/1jT04MZOFYBJSdci/SkpQYaos5Ye5+2dbeDLLxvOm6hnmt2M+xS/3FTYQavGCuonA=="
-        crossorigin="anonymous"></script>-->
+            integrity="sha512-LF9mm8uJwJj05mfwqi1W/1jT04MZOFYBJSdci/SkpQYaos5Ye5+2dbeDLLxvOm6hnmt2M+xS/3FTYQavGCuonA=="
+            crossorigin="anonymous"></script>-->
     <script src="https://www.gstatic.com/firebasejs/8.2.8/firebase-app.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/firebase/8.2.8/firebase-database.min.js"
       integrity="sha512-gqOv3FMgD+neiM6/zzS8hRtxFfUL0+LNjjDvKb45AfvejvPEvmyKK4kOz7s7WUm1dWAeBqGcugyMtmHYfrazOw=="
@@ -530,7 +532,7 @@
 
 
     <!-- TODO: Add SDKs for Firebase products that you want to use
-                                                           https://firebase.google.com/docs/web/setup#available-libraries -->
+                                                               https://firebase.google.com/docs/web/setup#available-libraries -->
     <script>
       // Your web app's Firebase configuration
       // For Firebase JS SDK v7.20.0 and later, measurementId is optional
