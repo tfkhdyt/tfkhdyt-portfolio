@@ -23,7 +23,10 @@ var keywords = [
   "taufik web portofolio",
   "Taufik Web",
   "Taufik Portofolio",
-  "Taufik Web Portofolio"
+  "Taufik Web Portofolio",
+  "thidayat web",
+  "thidayat portofolio",
+  "thidayat web portofolio"
 ];
 //var html = '<meta name="keywords" content="';
 var html = "";
