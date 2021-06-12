@@ -17,11 +17,17 @@ var keywords = [
   "Taufik Hidayat Web Portfolio",
   "taufik hidayat web portfolio",
   "tafanizer",
-  "tfkhdyt web app"
+  "tfkhdyt my id",
+  "taufik web",
+  "taufik portofolio",
+  "taufik web portofolio",
+  "Taufik Web",
+  "Taufik Portofolio",
+  "Taufik Web Portofolio"
 ];
 //var html = '<meta name="keywords" content="';
 var html = "";
-for(var i = 0; i < keywords.length; i++){
+for (var i = 0; i < keywords.length; i++) {
   var separator = (i < keywords.length - 1) ? ", " : "";
   html += keywords[i] + separator;
 }
