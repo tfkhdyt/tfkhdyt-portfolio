@@ -8,7 +8,7 @@
 /*--------------------------------------------------------------
 # General
 --------------------------------------------------------------*/
-html{
+html {
   position: relative;
   min-height: 100%;
 }
@@ -1272,7 +1272,7 @@ div#copyright:hover span#c {
     object-fit: cover;
   }
 }
-.donate{
+.donate {
   position: absolute;
   bottom: 0px;
   left: 0;
@@ -1285,4 +1285,31 @@ div#copyright:hover span#c {
   background-color: #0563BB;
   color: #ffffff;
   border-radius: 100%;
+}
+
+.back-to-top {
+  position: fixed;
+  display: none;
+  width: 40px;
+  height: 40px;
+  border-radius: 50px;
+  right: 15px;
+  bottom: 15px;
+  background: #149ddd;
+  color: #fff;
+  transition: display 0.5s ease-in-out;
+  z-index: 99999;
+}
+
+.back-to-top i {
+  font-size: 24px;
+  position: absolute;
+  top: 7px;
+  left: 8px;
+}
+
+.back-to-top:hover {
+  color: #fff;
+  background: #2eafec;
+  transition: background 0.2s ease-in-out;
 }

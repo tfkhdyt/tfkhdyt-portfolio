@@ -7,15 +7,6 @@
 !(function($) {
   "use strict";
 
-  // Preloader
-  $(window).on('load', function() {
-    if ($('#preloader').length) {
-      $('#preloader').delay(100).fadeOut('slow', function() {
-        $(this).remove();
-      });
-    }
-  });
-
   // Hero typed
   if ($('.typed').length) {
     var typed_strings = $(".typed").data('typed-items');
@@ -69,10 +60,12 @@
     }
   });
 
-  $(document).on('click', '.mobile-nav-toggle', function(e) {
-    $('body').toggleClass('mobile-nav-active');
-    $('.mobile-nav-toggle i').toggleClass('icofont-navigation-menu icofont-close');
-  });
+  $(document).on('click',
+    '.mobile-nav-toggle',
+    function(e) {
+      $('body').toggleClass('mobile-nav-active');
+      $('.mobile-nav-toggle i').toggleClass('icofont-navigation-menu icofont-close');
+    });
 
   $(document).click(function(e) {
     var container = $(".mobile-nav-toggle");
@@ -88,24 +81,25 @@
   var nav_sections = $('section');
   var main_nav = $('.nav-menu, #mobile-nav');
 
-  $(window).on('scroll', function() {
-    var cur_pos = $(this).scrollTop() + 300;
+  $(window).on('scroll',
+    function() {
+      var cur_pos = $(this).scrollTop() + 300;
 
-    nav_sections.each(function() {
-      var top = $(this).offset().top,
+      nav_sections.each(function() {
+        var top = $(this).offset().top,
         bottom = top + $(this).outerHeight();
 
-      if (cur_pos >= top && cur_pos <= bottom) {
-        if (cur_pos <= bottom) {
-          main_nav.find('li').removeClass('active');
+        if (cur_pos >= top && cur_pos <= bottom) {
+          if (cur_pos <= bottom) {
+            main_nav.find('li').removeClass('active');
+          }
+          main_nav.find('a[href="#' + $(this).attr('id') + '"]').parent('li').addClass('active');
         }
-        main_nav.find('a[href="#' + $(this).attr('id') + '"]').parent('li').addClass('active');
-      }
-      if (cur_pos < 200) {
-        $(".nav-menu ul:first li:first").addClass('active');
-      }
+        if (cur_pos < 200) {
+          $(".nav-menu ul:first li:first").addClass('active');
+        }
+      });
     });
-  });
 
   // Back to top button
   $(window).scroll(function() {
@@ -134,9 +128,10 @@
     $('.progress .progress-bar').each(function() {
       $(this).css("width", $(this).attr("aria-valuenow") + '%');
     });
-  }, {
-    offset: '80%'
-  });
+  },
+    {
+      offset: '80%'
+    });
 
   // Init AOS
   function aos_init() {
@@ -147,32 +142,33 @@
   }
 
   // Porfolio isotope and filter
-  $(window).on('load', function() {
+  $(window).on('load',
+    function() {
 
-    var portfolioIsotope = $('.portfolio-container').isotope({
-      itemSelector: '.portfolio-item'
-    });
-
-    $('#portfolio-flters li').on('click', function() {
-      $("#portfolio-flters li").removeClass('filter-active');
-      $(this).addClass('filter-active');
-
-      portfolioIsotope.isotope('reLayout',{
-        filter: $(this).data('filter')
+      var portfolioIsotope = $('.portfolio-container').isotope({
+        itemSelector: '.portfolio-item'
       });
 
+      $('#portfolio-flters li').on('click', function() {
+        $("#portfolio-flters li").removeClass('filter-active');
+        $(this).addClass('filter-active');
+
+        portfolioIsotope.isotope('reLayout', {
+          filter: $(this).data('filter')
+        });
+
+        aos_init();
+      });
+
+      // Initiate venobox (lightbox feature used in portofilo)
+      $('.venobox').venobox({
+        'share': false
+      });
+
+      // Initiate aos_init() function
       aos_init();
+
     });
-
-    // Initiate venobox (lightbox feature used in portofilo)
-    $('.venobox').venobox({
-      'share': false
-    });
-
-    // Initiate aos_init() function
-    aos_init();
-
-  });
 
   // Testimonials carousel (uses the Owl Carousel library)
   $(".testimonials-carousel").owlCarousel({
@@ -189,89 +185,79 @@
     loop: true,
     items: 1
   });
-  
-  var lastfmData = {
-  baseURL:
-    "https://ws.audioscrobbler.com/2.0/?method=user.getrecenttracks&user=",
-  // Your Last.fm Username
-  user: "tfkhdyt",
-  // Your API key
-  api_key: "7c19688950319f6a2f78417d1fc439d9",
-  additional: "&format=json&limit=1"
-};
 
-var getSetLastFM = function() {
-  $.ajax({
-    type: "GET",
-    url:
+  var lastfmData = {
+    baseURL:
+    "https://ws.audioscrobbler.com/2.0/?method=user.getrecenttracks&user=",
+    // Your Last.fm Username
+    user: "tfkhdyt",
+    // Your API key
+    api_key: "7c19688950319f6a2f78417d1fc439d9",
+    additional: "&format=json&limit=1"
+  };
+
+  var getSetLastFM = function() {
+    $.ajax({
+      type: "GET",
+      url:
       lastfmData.baseURL +
       lastfmData.user +
       "&api_key=" +
       lastfmData.api_key +
       lastfmData.additional,
-    dataType: "json",
-    success: function(resp) {
-      var recentTrack = resp.recenttracks.track[0];
-      var formatted =
+      dataType: "json",
+      success: function(resp) {
+        var recentTrack = resp.recenttracks.track[0];
+        var formatted =
         "<img src='https://i.imgur.com/EgWjJry.png'>" + recentTrack.name;
-      $("a#tracktitle")
+        $("a#tracktitle")
         .html(formatted)
         .attr("href", recentTrack.url)
         .attr("title", recentTrack.name + " by " + recentTrack.artist["#text"])
         .attr("target", "_blank");
 
-      var artistFormatted =
+        var artistFormatted =
         "<img src='https://i.imgur.com/fae5XZA.png'>" +
         recentTrack.artist["#text"];
-      $("a#trackartist")
+        $("a#trackartist")
         .html(artistFormatted)
         .attr("title", "Artist : " + recentTrack.artist["#text"]);
-      $("img#trackart").attr("src", recentTrack.image[2]["#text"]);
-    },
-    error: function(resp) {
-      $("a#tracktitle").html(
-        "<img src='https://i.imgur.com/EgWjJry.png'>" + "Silence!"
-      );
-      $("img#trackart").attr("src", "https://i.imgur.com/Q6cCswP.jpg");
-      var artistFormatted =
+        $("img#trackart").attr("src", recentTrack.image[2]["#text"]);
+      },
+      error: function(resp) {
+        $("a#tracktitle").html(
+          "<img src='https://i.imgur.com/EgWjJry.png'>" + "Silence!"
+        );
+        $("img#trackart").attr("src", "https://i.imgur.com/Q6cCswP.jpg");
+        var artistFormatted =
         "<img src='https://i.imgur.com/fae5XZA.png'>Prashant Shrestha";
-      $("a#trackartist")
+        $("a#trackartist")
         .html(artistFormatted)
         .attr("href", "www.prashant.me/");
-    }
-  });
-};
+      }
+    });
+  };
 
-// Get the new one.
-getSetLastFM();
-// Start the countdown.
-setInterval(getSetLastFM, 10 * 1000);
+  // Get the new one.
+  getSetLastFM();
+  // Start the countdown.
+  setInterval(getSetLastFM,
+    10 * 1000);
 
 })(jQuery);
 
-//Get the button
-let mybutton = document.getElementById("btn-back-to-top");
-
-// When the user scrolls down 20px from the top of the document, show the button
-window.onscroll = function () {
-  scrollFunction();
-};
-
-function scrollFunction() {
-  if (
-    document.body.scrollTop > 20 ||
-    document.documentElement.scrollTop > 20
-  ) {
-    mybutton.style.display = "block";
+// Back to top button
+$(window).scroll(function() {
+  if ($(this).scrollTop() > 100) {
+    $('.back-to-top').fadeIn('slow');
   } else {
-    mybutton.style.display = "none";
+    $('.back-to-top').fadeOut('slow');
   }
-}
-// When the user clicks on the button, scroll to the top of the document
-mybutton.addEventListener("click", backToTop);
+});
 
-function backToTop() {
-  //document.body.scrollTop = 0;
-  //document.documentElement.scrollTop = 0;
-  window.scrollTo({top: 0, behavior: 'smooth'});
-}
+$('.back-to-top').click(function() {
+  $('html, body').animate({
+    scrollTop: 0
+  }, 1500, 'easeInOutExpo');
+  return false;
+});
