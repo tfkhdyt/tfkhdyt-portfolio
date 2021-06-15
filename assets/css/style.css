@@ -1297,9 +1297,10 @@ div#copyright:hover span#c {
   bottom: 15px;
   background: #0563BB;
   color: #fff;
-  transition: display 0.5s ease-in-out;
+  transition: 0.5s;
   z-index: 99999;
   -webkit-backface-visibility: hidden;
+  -webkit-transform: translate3D(0, 0, 0);
 }
 
 .back-to-top i {
@@ -1312,5 +1313,7 @@ div#copyright:hover span#c {
 .back-to-top:hover {
   color: #fff;
   background: #044786;
-  transition: background 0.2s ease-in-out;
+  transition: 0.2s;
+  -webkit-backface-visibility: hidden;
+  -webkit-transform: translate3D(0, 0, 0);
 }
