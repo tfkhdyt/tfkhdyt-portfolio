@@ -1298,8 +1298,8 @@ div#copyright:hover span#c {
   background: #0563BB;
   color: #fff;
   transition: display 0.5s ease-in-out;
+  -moz-transition: display 0.5s ease-in-out;
   z-index: 99999;
-  filter: blur(0.1px);
   backface-visibility: hidden;
 }
 
@@ -1313,6 +1313,6 @@ div#copyright:hover span#c {
 .back-to-top:hover {
   color: #fff;
   background: #044786;
-  filter: blur(0.1px);
   transition: background 0.2s ease-in-out;
+  backface-visibility: hidden;
 }
