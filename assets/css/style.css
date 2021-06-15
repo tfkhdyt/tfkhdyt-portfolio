@@ -1295,10 +1295,11 @@ div#copyright:hover span#c {
   border-radius: 50px;
   right: 15px;
   bottom: 15px;
-  background: #149ddd;
+  background: #0563BB;
   color: #fff;
   transition: display 0.5s ease-in-out;
   z-index: 99999;
+  -webkit-backface-visibility: hidden;
 }
 
 .back-to-top i {
@@ -1310,6 +1311,6 @@ div#copyright:hover span#c {
 
 .back-to-top:hover {
   color: #fff;
-  background: #2eafec;
+  background: #044786;
   transition: background 0.2s ease-in-out;
 }
