@@ -1299,8 +1299,8 @@ div#copyright:hover span#c {
   color: #fff;
   transition: display 0.5s ease-in-out;
   z-index: 99999;
+  filter: blur(0.1px);
   backface-visibility: hidden;
-  filter: grayscale(1%);
 }
 
 .back-to-top i {
@@ -1313,6 +1313,6 @@ div#copyright:hover span#c {
 .back-to-top:hover {
   color: #fff;
   background: #044786;
+  filter: blur(0.1px);
   transition: background 0.2s ease-in-out;
-  filter: grayscale(1%);
 }
