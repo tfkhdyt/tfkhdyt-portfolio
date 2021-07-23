@@ -7,11 +7,10 @@
   z-index: 9999;
   background-color: #fff;
 }
-
-.loading {
+.preloader .loading {
   position: absolute;
   left: 50%;
   top: 50%;
-  transform: translate(-50%, -50%);
+  transform: translate(-50%,-50%);
   font: 14px arial;
 }
