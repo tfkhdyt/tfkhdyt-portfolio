@@ -28,7 +28,9 @@ var keywords = [
   "taufik web portfolio",
   "portofolio taufik",
   "web taufik",
-  "portofolio web taufik"
+  "portofolio web taufik",
+  "taufik programmer",
+  "taufik programer"
 ];
 //var html = '<meta name="keywords" content="';
 var html = "";
