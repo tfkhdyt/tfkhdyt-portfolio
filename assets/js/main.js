@@ -286,3 +286,22 @@
   });
 
 })(jQuery);
+
+const scriptURL = 'https://script.google.com/macros/s/AKfycbwRxjoPwueG03-j0kPb-nVRhoiqUh79ynRWqnD1pfRfH1WkdWVxW1fmK8vt1jNG6Wle/exec';
+const form = document.forms['submit-to-google-sheet'];
+const success = document.querySelector('.sent-message');
+
+form.addEventListener('submit', e => {
+  e.preventDefault();
+  fetch(scriptURL, { method: 'POST', body: new FormData(form)})
+    .then(response => {
+      console.log('Success!', response)
+      success.style.display = 'block';
+      setTimeout(() => {
+        success.style.display = 'none';
+      }, 2000);
+    })
+    .catch(error => {
+      console.error('Error!', error.message)
+    });
+});
