@@ -287,7 +287,7 @@
 
 })(jQuery);
 
-const scriptURL = 'https://script.google.com/macros/s/AKfycbwRxjoPwueG03-j0kPb-nVRhoiqUh79ynRWqnD1pfRfH1WkdWVxW1fmK8vt1jNG6Wle/exec';
+const scriptURL = 'https://script.google.com/macros/s/AKfycbz4zeawNe9YCQSl4nbDV_RmtmxI5mC38UlXGbGBIq3FcLTm2AgRpcpJnZGOqiLbwiDB/exec';
 const form = document.forms['submit-to-google-sheet'];
 const success = document.querySelector('.sent-message');
 
@@ -299,7 +299,7 @@ form.addEventListener('submit', e => {
       success.style.display = 'block';
       setTimeout(() => {
         success.style.display = 'none';
-      }, 2000);
+      }, 5000);
     })
     .catch(error => {
       console.error('Error!', error.message)
