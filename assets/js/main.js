@@ -290,17 +290,18 @@
 const scriptURL = 'https://script.google.com/macros/s/AKfycbz4zeawNe9YCQSl4nbDV_RmtmxI5mC38UlXGbGBIq3FcLTm2AgRpcpJnZGOqiLbwiDB/exec';
 const form = document.forms['submit-to-google-sheet'];
 const success = document.querySelector('.sent-message');
-const loading = document.querySelector('.loading');
+const loadingContact = document.querySelector('.loadingContact');
+loadingContact.style.display = 'none';
 
 form.addEventListener('submit', e => {
   e.preventDefault();
   fetch(scriptURL, { method: 'POST', body: new FormData(form)})
     .then(response => {
-      loading.style.display = 'block';
-      if (response) {
+      loadingContact.style.display = 'inline-block';
+      if (response.status == 200) {
         console.log('Success!', response)
-        loading.style.display = 'none';
-        success.style.display = 'block';
+        loadingContact.style.display = 'none';
+        success.style.display = 'inline-block';
         setTimeout(() => {
           success.style.display = 'none';
         }, 5000);
