@@ -1033,14 +1033,14 @@ section {
   font-weight: 600;
 }
 
-.contact .php-email-form .loadingContact {
+.contact .php-email-form .loading {
   display: none;
   background: #fff;
   text-align: center;
   padding: 15px;
 }
 
-.contact .php-email-form .loadingContact:before {
+.contact .php-email-form .loading:before {
   content: "";
   display: inline-block;
   border-radius: 50%;
@@ -1049,8 +1049,8 @@ section {
   margin: 0 10px -6px 0;
   border: 3px solid #18d26e;
   border-top-color: #eee;
-  -webkit-animation: animate-loading 1s linear infinite;
-  animation: animate-loading 1s linear infinite;
+  -webkit-animation: animate-loading1slinear infinite;
+  animation: animate-loading1slinear infinite;
 }
 
 .contact .php-email-form input,
