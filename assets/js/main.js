@@ -293,15 +293,35 @@ const success = document.querySelector('.sent-message');
 
 form.addEventListener('submit', e => {
   e.preventDefault();
+  Swal.fire({
+      title: 'Mohon tunggu!',
+      allowOutsideClick: false,
+      showConfirmButton: false,
+      willOpen: () => {
+          Swal.showLoading();
+      },
+  });
   fetch(scriptURL, { method: 'POST', body: new FormData(form)})
     .then(response => {
-      console.log('Success!', response)
-      success.style.display = 'block';
-      setTimeout(() => {
-        success.style.display = 'none';
-      }, 5000);
+      if (response.status == 200) {
+        console.log("Success: ", response);
+        Swal.hideLoading();
+        Swal.fire ({
+          title: 'Berhasil!',
+          text: 'Pesan sudah saya terima',
+          icon: 'success'
+        });
+      }
     })
     .catch(error => {
-      console.error('Error!', error.message)
+      console.error('Error!', error.message);
+      Swal.hideLoading()
+      .then(() => {
+        Swal.fire ({
+          title: 'Gagal!',
+          text: 'Pesan gagal dikirim',
+          icon: 'error'
+        });
+      });
     });
 });
