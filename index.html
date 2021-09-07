@@ -636,16 +636,20 @@
           //console.log(childData);
 
           html +=
-          "<div class='col-lg-6 col-md-6 portfolio-item filter-" +
-          `${childData.tipe}` +
-          "'><div class='portfolio-wrap thumb-post'><img src='" +
-          `${childData.foto}` +
-          "' class='img-fluid' alt=''><div class='portfolio-info p-4'><h4>" +
-          `${childData.nama}` + "</h4><p>" +
-          `${childData.deskripsi}` +
-          "</p><div class='portfolio-links mt-2'><a href='" +
-          `${childData.link}` +
-          "' target='_blank' class='btn btn-primary badge text-white' style='font-size:.95rem'><i class='fas fa-external-link-alt'></i> Buka</a></div></div></div></div>";
+          `<div class='col-lg-6 col-md-6 portfolio-item filter-${childData.tipe}'>
+             <div class='portfolio-wrap thumb-post'>
+               <img src='${childData.foto}' class='img-fluid' alt=''/>
+               <div class='portfolio-info p-4'>
+                 <h4>${childData.nama}</h4>
+                 <p>${childData.deskripsi}</p>
+               <div class='portfolio-links mt-2'>
+                 <a href='${childData.link}' target='_blank' class='btn btn-primary badge text-white' style='font-size:.95rem'>
+                   <i class='fas fa-external-link-alt'></i> Buka
+                 </a>
+               </div>
+             </div>
+           </div>
+         </div>`;
         });
         //$('#project').append(el);
         //$('#project').append(html);
@@ -667,16 +671,20 @@
           //console.log(childData);
 
           html +=
-          "<div class='col-lg-6 col-md-6 portfolio-item filter-" +
-          `${childData.tipe}` +
-          "'><div class='portfolio-wrap thumb-post'><img src='" +
-          `${childData.foto}` +
-          "' class='img-fluid' alt=''><div class='portfolio-info p-4'><h4>" +
-          `${childData.nama}` + "</h4><p>" +
-          `${childData.deskripsi}` +
-          "</p><div class='portfolio-links mt-2'><a href='" +
-          `${childData.link}` +
-          "' target='_blank' class='btn btn-primary badge text-white' style='font-size:.95rem'><i class='fas fa-external-link-alt'></i> Buka</a></div></div></div></div>";
+          `<div class='col-lg-6 col-md-6 portfolio-item filter-${childData.tipe}'>
+             <div class='portfolio-wrap thumb-post'>
+               <img src='${childData.foto}' class='img-fluid' alt=''/>
+               <div class='portfolio-info p-4'>
+                 <h4>${childData.nama}</h4>
+                 <p>${childData.deskripsi}</p>
+               <div class='portfolio-links mt-2'>
+                 <a href='${childData.link}' target='_blank' class='btn btn-primary badge text-white' style='font-size:.95rem'>
+                   <i class='fas fa-external-link-alt'></i> Buka
+                 </a>
+               </div>
+             </div>
+           </div>
+         </div>`;
         });
         //$('#project').append(el);
         //$('#project').append(html);
