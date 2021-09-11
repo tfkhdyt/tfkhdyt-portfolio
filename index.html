@@ -630,13 +630,13 @@
         snapshot) {
         var html = "";
         html +=
-        "<div class='row portfolio-container' data-aos='zoom-in' data-aos-duration='500'>";
+        "<div class='row portfolio-container px-2' data-aos='zoom-in' data-aos-duration='500'>";
         snapshot.forEach(function(childSnapshot) {
           var childData = childSnapshot.val();
           //console.log(childData);
 
           html +=
-          `<div class='col-lg-6 col-md-6 portfolio-item filter-${childData.tipe}'>
+          `<div class='col-12 col-md-4 portfolio-item filter-${childData.tipe}'>
              <div class='portfolio-wrap thumb-post'>
                <img src='${childData.foto}' class='img-fluid' alt=''/>
                <div class='portfolio-info p-4'>
@@ -665,13 +665,13 @@
         snapshot) {
         var html = "";
         html +=
-        "<div class='row portfolio-container' data-aos='zoom-in' data-aos-duration='500'>";
+        "<div class='row portfolio-container px-2' data-aos='zoom-in' data-aos-duration='500'>";
         snapshot.forEach(function(childSnapshot) {
           var childData = childSnapshot.val();
           //console.log(childData);
 
           html +=
-          `<div class='col-lg-6 col-md-6 portfolio-item filter-${childData.tipe}'>
+          `<div class='col-12 col-md-4 portfolio-item filter-${childData.tipe}'>
              <div class='portfolio-wrap thumb-post'>
                <img src='${childData.foto}' class='img-fluid' alt=''/>
                <div class='portfolio-info p-4'>
