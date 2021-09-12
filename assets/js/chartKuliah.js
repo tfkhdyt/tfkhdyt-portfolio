@@ -18,7 +18,7 @@ const chartKuliah = new Chart(ctx, {
       backgroundColor: '#0563bb7a',
       borderColor: '#0563bb7a',
       fill: true,
-      pointHitRadius: 5
+      pointHitRadius: 10
     }]
   },
   options: {

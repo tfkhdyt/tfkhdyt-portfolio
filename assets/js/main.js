@@ -60,12 +60,10 @@
     }
   });
 
-  $(document).on('click',
-    '.mobile-nav-toggle',
-    function(e) {
-      $('body').toggleClass('mobile-nav-active');
-      $('.mobile-nav-toggle i').toggleClass('icofont-navigation-menu icofont-close');
-    });
+  $(document).on('click', '.mobile-nav-toggle', function(e) {
+    $('body').toggleClass('mobile-nav-active');
+    $('.mobile-nav-toggle i').toggleClass('icofont-navigation-menu icofont-close');
+  });
 
   $(document).click(function(e) {
     var container = $(".mobile-nav-toggle");
@@ -76,7 +74,7 @@
       }
     }
   });
-
+  
   // Navigation active state on scroll
   var nav_sections = $('section');
   var main_nav = $('.nav-menu, #mobile-nav');
