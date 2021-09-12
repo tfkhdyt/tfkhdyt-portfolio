@@ -1,4 +1,4 @@
-const ctx = document.getElementById('myChart').getContext('2d');
+const ctx = document.getElementById('chartKuliah').getContext('2d');
 
 const ips = [3.50, 3.83];
 
@@ -8,17 +8,17 @@ ips.forEach((e) => {
 });
 ipk = (ipk / ips.length).toFixed(2);
 
-const myChart = new Chart(ctx, {
-  type: 'bar',
+const chartKuliah = new Chart(ctx, {
+  type: 'line',
   data: {
     labels: ['1', '2', '3', '4', '5', '6', '7', '8'],
     datasets: [{
       label: 'IPS',
       data: ips,
-      backgroundColor: '#0563BB',
-      borderColor: '#0563BB',
-      hoverBackgroundColor: 'rgb(5,72,134)',
-      hoverBorderColor: 'rgb(5,72,134)'
+      backgroundColor: '#0563bb7a',
+      borderColor: '#0563bb7a',
+      fill: true,
+      pointHitRadius: 5
     }]
   },
   options: {
@@ -51,8 +51,9 @@ const myChart = new Chart(ctx, {
       },
       subtitle: {
         display: true,
-        text: `IPK: ${ipk} \n`
+        text: `IPK: ${ipk}`
       }
-    }
+    },
+    barThickness: 30
   }
 });
