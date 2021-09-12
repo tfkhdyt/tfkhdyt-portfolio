@@ -22,7 +22,6 @@ const myChart = new Chart(ctx, {
     }]
   },
   options: {
-    responsive: false,
     aspectRatio: 1.3,
     scales: {
       x: {
