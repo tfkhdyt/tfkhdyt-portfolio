@@ -22,7 +22,7 @@ const myChart = new Chart(ctx, {
     }]
   },
   options: {
-    // responsive: true,
+    aspectRatio: 1.3,
     scales: {
       x: {
         display: true,
@@ -35,7 +35,10 @@ const myChart = new Chart(ctx, {
         display: true,
         beginAtZero: true,
         min: 0,
-        max: 4.0
+        max: 4.0,
+        ticks: {
+          stepSize: 1
+        }
       }
     },
     plugins: {
