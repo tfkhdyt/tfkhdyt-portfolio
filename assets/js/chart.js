@@ -22,7 +22,7 @@ const myChart = new Chart(ctx, {
     }]
   },
   options: {
-    responsive: true,
+    // responsive: true,
     scales: {
       x: {
         display: true,
@@ -33,10 +33,6 @@ const myChart = new Chart(ctx, {
       },
       y: {
         display: true,
-        title: {
-          display: true,
-          text: 'IPS'
-        },
         beginAtZero: true,
         min: 0,
         max: 4.0
