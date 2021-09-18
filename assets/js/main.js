@@ -323,3 +323,9 @@ form.addEventListener('submit', e => {
       });
     });
 });
+
+new ClipboardJS('.copy');
+
+$(function () {
+  $('[data-toggle="tooltip"]').tooltip();
+});
