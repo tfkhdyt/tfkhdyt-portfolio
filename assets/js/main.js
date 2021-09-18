@@ -326,6 +326,10 @@ form.addEventListener('submit', e => {
 
 new ClipboardJS('.copy');
 
-$(function () {
-  $('[data-toggle="tooltip"]').tooltip();
+$('.copy').click(function () {
+    const that = $(this);
+    that.tooltip('show');
+    setTimeout(function(){
+        that.tooltip('hide');
+    }, 2000);
 });
