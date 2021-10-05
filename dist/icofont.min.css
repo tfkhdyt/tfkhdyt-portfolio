@@ -1,0 +1,7 @@
+/*! 
+* @package IcoFont 
+* @version 1.0.1 
+* @author IcoFont https://icofont.com 
+* @copyright Copyright (c) 2015 - 2018 IcoFont 
+* @license - https://icofont.com/license/
+*/@font-face{font-family:IcoFont;font-weight:400;font-style:Regular;src:url(fonts/icofont.woff2) format("woff2"),url(fonts/icofont.woff) format("woff")}[class*=" icofont-"],[class^=icofont-]{font-family:IcoFont!important;speak:none;font-style:normal;font-weight:400;font-variant:normal;text-transform:none;white-space:nowrap;word-wrap:normal;direction:ltr;line-height:1;-webkit-font-feature-settings:"liga";-webkit-font-smoothing:antialiased}.icofont-rounded-right:before{content:"\eaa0"}.icofont-simple-up:before{content:"\eab9"}.icofont-google-map:before{content:"\ed42"}.icofont-telegram:before{content:"\ed75"}.icofont-envelope:before{content:"\ef14"}.icofont-navigation-menu:before{content:"\efa2"}@keyframes icofont-spin{0%{-webkit-transform:rotate(0);transform:rotate(0)}100%{-webkit-transform:rotate(360deg);transform:rotate(360deg)}}

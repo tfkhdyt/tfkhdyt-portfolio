@@ -12,14 +12,16 @@ const chartSMK = new Chart(ctx2, {
   type: 'line',
   data: {
     labels: ['1', '2', '3', '4', '5', '6'],
-    datasets: [{
-      label: 'Nilai Semester',
-      data: nilaiKelas,
-      backgroundColor: '#0563bb7a',
-      borderColor: '#0563bb7a',
-      fill: true,
-      pointHitRadius: 10
-    }]
+    datasets: [
+      {
+        label: 'Nilai Semester',
+        data: nilaiKelas,
+        backgroundColor: '#0563bb7a',
+        borderColor: '#0563bb7a',
+        fill: true,
+        pointHitRadius: 10,
+      },
+    ],
   },
   options: {
     aspectRatio: 1.3,
@@ -28,8 +30,8 @@ const chartSMK = new Chart(ctx2, {
         display: true,
         title: {
           display: true,
-          text: 'Semester'
-        }
+          text: 'Semester',
+        },
       },
       y: {
         display: true,
@@ -37,23 +39,23 @@ const chartSMK = new Chart(ctx2, {
         min: 0,
         max: 100,
         ticks: {
-          stepSize: 25
-        }
-      }
+          stepSize: 25,
+        },
+      },
     },
     plugins: {
       title: {
         display: true,
-        text: 'Nilai Rata-rata Semester'
+        text: 'Nilai Rata-rata Semester',
       },
       legend: {
-        display: true
+        display: true,
       },
       subtitle: {
         display: true,
-        text: `Rata-rata Total: ${nilaiTotal}`
-      }
+        text: `Rata-rata Total: ${nilaiTotal}`,
+      },
     },
-    barThickness: 30
-  }
+    barThickness: 30,
+  },
 });
