@@ -1,7 +1,7 @@
-@import url("https://fonts.googleapis.com/css?family=Source+Sans+Pro");
+@import url('https://fonts.googleapis.com/css?family=Source+Sans+Pro');
 
 $globalFontSize: 13px;
-$globalFontFamily: "Source Sans Pro", sans-serif;
+$globalFontFamily: 'Source Sans Pro', sans-serif;
 $globalBorderRadius: 3px;
 
 @mixin border-left-radius($radius) {

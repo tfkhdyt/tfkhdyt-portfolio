@@ -1,4 +1,4 @@
-@import url("https://fonts.googleapis.com/css?family=Source+Sans+Pro");
+@import url('https://fonts.googleapis.com/css?family=Source+Sans+Pro');
 body {
   padding: 0;
   margin: 0;
@@ -7,7 +7,7 @@ body .nowplayingcard {
   width: 100%;
   margin: 0 auto;
   margin-top: 3%;
-  font-family: "Source Sans Pro", sans-serif;
+  font-family: 'Source Sans Pro', sans-serif;
   font-size: 13px;
 }
 body .nowplayingcard .nowplayingcontainer-inner {
@@ -68,7 +68,12 @@ body .nowplayingcard .nowplayingcontainer-inner .trackInfo a:nth-child(odd) {
   letter-spacing: 0.2px;
   padding: 10% 0 0 5%;
 }
-body .nowplayingcard .nowplayingcontainer-inner .trackInfo a:nth-child(odd) img {
+body
+  .nowplayingcard
+  .nowplayingcontainer-inner
+  .trackInfo
+  a:nth-child(odd)
+  img {
   width: 15px;
   height: 15px;
   vertical-align: middle;
@@ -80,7 +85,12 @@ body .nowplayingcard .nowplayingcontainer-inner .trackInfo a:nth-child(even) {
   letter-spacing: 0.1px;
   padding: 5% 0 0 5%;
 }
-body .nowplayingcard .nowplayingcontainer-inner .trackInfo a:nth-child(even) img {
+body
+  .nowplayingcard
+  .nowplayingcontainer-inner
+  .trackInfo
+  a:nth-child(even)
+  img {
   width: 15px;
   height: 15px;
   vertical-align: middle;
