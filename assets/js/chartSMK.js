@@ -1,12 +1,12 @@
-const ctx2 = document.getElementById('chartSMK').getContext('2d');
+const ctx2 = document.getElementById('chartSMK').getContext('2d')
 
-const nilaiKelas = [81.75, 83.96, 86.88, 86.17, 86.8, 87.15];
+const nilaiKelas = [81.75, 83.96, 86.88, 86.17, 86.8, 87.15]
 
-let nilaiTotal = 0;
+let nilaiTotal = 0
 nilaiKelas.forEach((e) => {
-  nilaiTotal += e;
-});
-nilaiTotal = (nilaiTotal / nilaiKelas.length).toFixed(2);
+  nilaiTotal += e
+})
+nilaiTotal = (nilaiTotal / nilaiKelas.length).toFixed(2)
 
 const chartSMK = new Chart(ctx2, {
   type: 'line',
@@ -19,9 +19,9 @@ const chartSMK = new Chart(ctx2, {
         backgroundColor: '#0563bb7a',
         borderColor: '#0563bb7a',
         fill: true,
-        pointHitRadius: 10,
-      },
-    ],
+        pointHitRadius: 10
+      }
+    ]
   },
   options: {
     aspectRatio: 1.3,
@@ -30,8 +30,8 @@ const chartSMK = new Chart(ctx2, {
         display: true,
         title: {
           display: true,
-          text: 'Semester',
-        },
+          text: 'Semester'
+        }
       },
       y: {
         display: true,
@@ -39,23 +39,23 @@ const chartSMK = new Chart(ctx2, {
         min: 0,
         max: 100,
         ticks: {
-          stepSize: 25,
-        },
-      },
+          stepSize: 25
+        }
+      }
     },
     plugins: {
       title: {
         display: true,
-        text: 'Nilai Rata-rata Semester',
+        text: 'Nilai Rata-rata Semester'
       },
       legend: {
-        display: true,
+        display: true
       },
       subtitle: {
         display: true,
-        text: `Rata-rata Total: ${nilaiTotal}`,
-      },
+        text: `Rata-rata Total: ${nilaiTotal}`
+      }
     },
-    barThickness: 30,
-  },
-});
+    barThickness: 30
+  }
+})

@@ -1,12 +1,12 @@
-const ctx = document.getElementById('chartKuliah').getContext('2d');
+const ctx = document.getElementById('chartKuliah').getContext('2d')
 
-const ips = [3.5, 3.83];
+const ips = [3.5, 3.83]
 
-let ipk = 0;
+let ipk = 0
 ips.forEach((e) => {
-  ipk += e;
-});
-ipk = (ipk / ips.length).toFixed(2);
+  ipk += e
+})
+ipk = (ipk / ips.length).toFixed(2)
 
 const chartKuliah = new Chart(ctx, {
   type: 'line',
@@ -19,9 +19,9 @@ const chartKuliah = new Chart(ctx, {
         backgroundColor: '#0563bb7a',
         borderColor: '#0563bb7a',
         fill: true,
-        pointHitRadius: 10,
-      },
-    ],
+        pointHitRadius: 10
+      }
+    ]
   },
   options: {
     aspectRatio: 1.3,
@@ -30,8 +30,8 @@ const chartKuliah = new Chart(ctx, {
         display: true,
         title: {
           display: true,
-          text: 'Semester',
-        },
+          text: 'Semester'
+        }
       },
       y: {
         display: true,
@@ -39,23 +39,23 @@ const chartKuliah = new Chart(ctx, {
         min: 0,
         max: 4.0,
         ticks: {
-          stepSize: 1,
-        },
-      },
+          stepSize: 1
+        }
+      }
     },
     plugins: {
       title: {
         display: true,
-        text: 'Indeks Prestasi Semester',
+        text: 'Indeks Prestasi Semester'
       },
       legend: {
-        display: true,
+        display: true
       },
       subtitle: {
         display: true,
-        text: `IPK: ${ipk}`,
-      },
+        text: `IPK: ${ipk}`
+      }
     },
-    barThickness: 30,
-  },
-});
+    barThickness: 30
+  }
+})
