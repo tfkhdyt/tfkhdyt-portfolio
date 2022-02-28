@@ -1,6 +1,6 @@
 const ctx = document.getElementById('chartKuliah').getContext('2d')
 
-const ips = [3.5, 3.83]
+const ips = [3.5, 3.83, 3.9]
 
 let ipk = 0
 ips.forEach((e) => {
